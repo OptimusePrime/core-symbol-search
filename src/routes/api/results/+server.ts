@@ -7,10 +7,11 @@ export const POST: RequestHandler = async ({ request }) => {
   const result: GameResult = await request.json();
   
   try {
-    saveResult(result);
+    await saveResult(result);
     return json({ success: true });
   } catch (error) {
     console.error("Error saving result:", error);
     return json({ success: false, error: "Failed to save result" }, { status: 500 });
   }
 };
+

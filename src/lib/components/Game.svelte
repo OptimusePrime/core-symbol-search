@@ -11,7 +11,7 @@
 
   let currentTaskIndex = $state(0);
   let score = $state(0);
-  let timeLeft = $state(60);
+  let timeLeft = $state(120);
   let isRunning = $state(true);
 
   const currentTask = $derived(tasks[currentTaskIndex]);

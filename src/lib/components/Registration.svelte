@@ -1,17 +1,24 @@
 <script lang="ts">
   interface Props {
-    onSubmit: (name: string, className: string) => void;
+    onSubmit: (
+      name: string,
+      className: string,
+      measurementNumber: 1 | 2 | 3,
+      group: "A" | "B",
+    ) => void;
   }
 
   let { onSubmit }: Props = $props();
 
   let name = $state("");
   let className = $state("");
+  let measurementNumber = $state<1 | 2 | 3>(1);
+  let group = $state<"A" | "B">("A");
 
   function handleSubmit(e: Event) {
     e.preventDefault();
     if (name.trim() && className.trim()) {
-      onSubmit(name.trim(), className.trim());
+      onSubmit(name.trim(), className.trim(), measurementNumber, group);
     }
   }
 </script>
@@ -53,6 +60,29 @@
         placeholder="npr. 4.a"
         required
       />
+    </div>
+
+    <div>
+      <label for="measurementNumber" class="block text-sm font-medium mb-2"
+        >Broj mjerenja</label
+      >
+      <select
+        id="measurementNumber"
+        bind:value={measurementNumber}
+        class="input-field"
+      >
+        <option value={1}>1. mjerenje</option>
+        <option value={2}>2. mjerenje</option>
+        <option value={3}>3. mjerenje</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="group" class="block text-sm font-medium mb-2">Skupina</label>
+      <select id="group" bind:value={group} class="input-field">
+        <option value="A">A – Visoki glikemijski indeks</option>
+        <option value="B">B – Niski glikemijski indeks</option>
+      </select>
     </div>
 
     <button

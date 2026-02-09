@@ -11,7 +11,7 @@ export const POST: RequestHandler = async ({ request }) => {
     return json({ success: true });
   } catch (error) {
     console.error("Error saving result:", error);
-    return json({ success: false, error: "Failed to save result" }, { status: 500 });
+    return json({ success: false, error: error }, { status: 500 });
   }
 };
 

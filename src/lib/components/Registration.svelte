@@ -71,10 +71,10 @@
         bind:value={measurementNumber}
         class="input-field"
       >
-        <option value={1}>1. mjerenje</option>
-        <option value={2}>2. mjerenje</option>
-        <option value={3}>3. mjerenje</option>
-        <option value={4}>4. mjerenje</option>
+        <option value={1}>Probno mjerenje</option>
+        <option value={2}>1. mjerenje</option>
+        <option value={3}>2. mjerenje</option>
+        <option value={4}>3. mjerenje</option>
       </select>
     </div>
 

@@ -81,11 +81,7 @@
           Gornji dio prikazuje <strong>ciljne simbole</strong> koje tražite
         </li>
         <li>Donji dio prikazuje <strong>opcije</strong> za odabir</li>
-        <li>
-          Kliknite na opciju koja odgovara bilo kojem ciljnom simbolu <strong
-            >(uključujući rotaciju!)</strong
-          >
-        </li>
+        <li>Kliknite na opciju koja odgovara bilo kojem ciljnom simbolu</li>
         <li>
           Ako nijedan cilj nije prisutan u opcijama, kliknite <strong
             >"NEMA"</strong

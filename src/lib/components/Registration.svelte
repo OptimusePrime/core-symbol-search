@@ -3,7 +3,7 @@
     onSubmit: (
       name: string,
       className: string,
-      measurementNumber: 1 | 2 | 3,
+      measurementNumber: 1 | 2 | 3 | 4,
       group: "A" | "B",
     ) => void;
   }
@@ -12,7 +12,7 @@
 
   let name = $state("");
   let className = $state("");
-  let measurementNumber = $state<1 | 2 | 3>(1);
+  let measurementNumber = $state<1 | 2 | 3 | 4>(1);
   let group = $state<"A" | "B">("A");
 
   function handleSubmit(e: Event) {
@@ -74,6 +74,7 @@
         <option value={1}>1. mjerenje</option>
         <option value={2}>2. mjerenje</option>
         <option value={3}>3. mjerenje</option>
+        <option value={4}>4. mjerenje</option>
       </select>
     </div>
 

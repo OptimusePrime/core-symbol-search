@@ -16,7 +16,7 @@ export interface VasResponse {
 export interface GameResult {
   name: string;
   class: string;
-  measurementNumber: 1 | 2 | 3;
+  measurementNumber: 1 | 2 | 3 | 4;
   group: "A" | "B";
   score: number;
   totalTasks: number;

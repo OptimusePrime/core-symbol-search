@@ -75,7 +75,7 @@ export async function getAllResults(): Promise<GameResult[]> {
     results.push({
       name: row.name as string,
       class: row.class as string,
-      measurementNumber: row.measurementNumber as 1 | 2 | 3,
+      measurementNumber: row.measurementNumber as 1 | 2 | 3 | 4,
       group: row.group as "A" | "B",
       score: row.score as number,
       totalTasks: row.totalTasks as number,

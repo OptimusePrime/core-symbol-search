@@ -14,7 +14,7 @@
   let gameState = $state<GameState>("registration");
   let userName = $state("");
   let userClass = $state("");
-  let measurementNumber = $state<1 | 2 | 3>(1);
+  let measurementNumber = $state<1 | 2 | 3 | 4>(1);
   let userGroup = $state<"A" | "B">("A");
   let vasResponses = $state<VasResponse[]>([]);
   let finalScore = $state(0);
@@ -29,7 +29,7 @@
   function handleRegistration(
     name: string,
     className: string,
-    measNum: 1 | 2 | 3,
+    measNum: 1 | 2 | 3 | 4,
     group: "A" | "B",
   ) {
     userName = name;
